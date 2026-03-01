@@ -448,3 +448,29 @@ document.addEventListener('DOMContentLoaded', function() {
         const footerSection = document.querySelector('footer');
         if (footerSection) footerObserver.observe(footerSection);
     });
+    document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // SVG entrance
+                    if (entry.target.id === 'svg-container') {
+                        entry.target.classList.add('svg-active');
+                    }
+                    // Generic reveal items (Title and Text)
+                    if (entry.target.classList.contains('reveal-item')) {
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0)";
+                    }
+                    // SME Card
+                    if (entry.target.classList.contains('reveal-card')) {
+                        entry.target.classList.add('card-active');
+                    }
+                }
+            });
+        }, { threshold: 0.15 });
+
+        // Observe elements
+        document.querySelectorAll('.reveal-item, .reveal-card, #svg-container').forEach(el => {
+            observer.observe(el);
+        });
+    });

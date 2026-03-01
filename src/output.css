@@ -485,6 +485,9 @@
   .scale-\[2\.4\] {
     scale: 2.4;
   }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
   .transform-gpu {
     transform: translateZ(0) var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
@@ -633,6 +636,9 @@
   }
   .bg-red-50 {
     background-color: var(--color-red-50);
+  }
+  .bg-slate-50 {
+    background-color: var(--color-slate-50);
   }
   .bg-slate-200 {
     background-color: var(--color-slate-200);
@@ -891,8 +897,8 @@
   .opacity-0 {
     opacity: 0%;
   }
-  .opacity-10 {
-    opacity: 10%;
+  .opacity-15 {
+    opacity: 15%;
   }
   .opacity-100 {
     opacity: 100%;
@@ -952,6 +958,9 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .delay-200 {
+    transition-delay: 200ms;
+  }
   .delay-300 {
     transition-delay: 300ms;
   }
@@ -1004,24 +1013,10 @@
       }
     }
   }
-  .group-hover\:scale-\[1\.01\] {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        scale: 1.01;
-      }
-    }
-  }
   .group-hover\:rotate-3 {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
         rotate: 3deg;
-      }
-    }
-  }
-  .group-hover\:opacity-20 {
-    &:is(:where(.group):hover *) {
-      @media (hover: hover) {
-        opacity: 20%;
       }
     }
   }
@@ -1415,6 +1410,11 @@
       width: calc(1 / 2 * 100%);
     }
   }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   .md\:grid-cols-4 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1433,6 +1433,11 @@
   .md\:gap-8 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:p-8 {
+    @media (width >= 48rem) {
+      padding: calc(var(--spacing) * 8);
     }
   }
   .md\:py-20 {
@@ -1630,6 +1635,31 @@
   padding-left: 5px;
   transition: all 0.3s ease;
 }
+.svg-entrance {
+  opacity: 0;
+  transform: rotate(-10deg) scale(0.9);
+  transition: all 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.svg-active {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+.reveal-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+.card-active {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+.solution-item {
+  transition: all 0.3s ease;
+}
+.solution-item:hover {
+  transform: translateX(8px);
+  background: rgba(0, 124, 132, 0.05);
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
@@ -1659,6 +1689,26 @@
   syntax: "*";
   inherits: false;
   initial-value: 1;
+}
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
 }
 @property --tw-space-y-reverse {
   syntax: "*";
@@ -1895,6 +1945,11 @@
       --tw-scale-x: 1;
       --tw-scale-y: 1;
       --tw-scale-z: 1;
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-gradient-position: initial;
