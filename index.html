@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SARYAAN</title>
+  <link rel="stylesheet" href="./src/output.css">
+</head>
+<body>
+
+<nav class="w-full bg-[#FCFCFC] shadow-sm border-b sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+    <a href="index.html" class="inline-flex items-center shrink-0 relative z-10" aria-label="Saryaan Home">
+      <span class="inline-flex h-14 sm:h-16 w-[170px] sm:w-[200px] overflow-hidden items-center justify-center">
+        <img src="./logo.png" alt="Saryaan" class="block w-full h-full object-contain scale-[2.4] sm:scale-[2.6] origin-center" />
+      </span>
+    </a>
+
+    <div class="hidden lg:flex items-center gap-10 text-[15px]">
+      <a href="index.html" class="font-bold text-[#007C84]">Home</a>
+      <a href="solutions.html" class="font-medium text-slate-600 hover:text-[#007C84] transition-colors">Solutions</a>
+      <a href="partners.html" class="font-medium text-slate-600 hover:text-[#007C84] transition-colors">Partners</a>
+      <a href="contact.html" class="font-medium text-slate-600 hover:text-[#007C84] transition-colors">Contact</a>
+    </div>
+
+<div class="hidden lg:flex items-center gap-4">
+    <a href="contact.html"
+        class="px-6 py-2.5 rounded-full text-sm font-bold text-[#0B1E3B] border-2 border-[#0B1E3B]/10 
+               hover:border-[#0B1E3B] hover:bg-slate-50 hover:-translate-y-0.5 
+               transition-all duration-300 shadow-sm hover:shadow-md active:scale-95">
+        Contact Us
+    </a>
+    
+    <a href="contact.html"
+        class="px-7 py-2.5 rounded-full text-sm font-bold bg-[#007C84] text-white 
+               shadow-[0_4px_14px_0_rgba(0,124,132,0.39)] hover:bg-[#0B1E3B] 
+               hover:shadow-[0_6px_20px_rgba(11,30,59,0.23)] hover:-translate-y-0.5 
+               transition-all duration-300 active:scale-95">
+        Request Demo
+    </a>
+</div>
+
+    <button class="lg:hidden p-2 text-[#0B1E3B] focus:outline-none" onclick="toggleMenu()" id="menu-btn">
+      <svg id="menu-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+
+ <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-2xl z-50 transition-all duration-300">
+    <div class="px-6 py-8 flex flex-col gap-6">
+        <a href="index.html" class="text-lg font-bold text-[#007C84]">Home</a>
+        <a href="solutions.html" class="text-lg font-semibold text-slate-700 hover:text-[#007C84] transition-colors">Solutions</a>
+        <a href="partners.html" class="text-lg font-semibold text-slate-700 hover:text-[#007C84] transition-colors">Partners</a>
+        <a href="contact.html" class="text-lg font-semibold text-slate-700 hover:text-[#007C84] transition-colors">Contact</a>
+
+        <div class="flex flex-col gap-4 pt-4 border-t border-slate-50">
+          
+          <button class="w-full h-12 rounded-full font-bold bg-[#007C84] text-white shadow-[0_4px_14px_0_rgba(0,124,132,0.39)] 
+                         active:scale-95 active:-translate-y-0.5 transition-all duration-300">
+            Request Demo
+          </button>
+
+          <button onclick="window.location.href='contact.html'"
+            class="w-full h-12 rounded-full font-bold border-2 border-[#0B1E3B]/10 text-[#0B1E3B] 
+                   active:scale-95 active:-translate-y-0.5 transition-all duration-300">
+            Contact Us
+          </button>
+
+        </div>
+    </div>
+</div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobile-menu");
+    menu.classList.toggle("hidden");
+  }
+</script>
+
+    <!-- ═══════════════════════════════════════ -->
+    <!--              HERO SECTION               -->
+    <!-- ═══════════════════════════════════════ -->
+    <section class="w-full relative overflow-hidden flex items-start"
+        style="background:linear-gradient(135deg,#0B1E3B 0%,#0a3050 40%,#007C84 100%);min-height:94vh;" id="hero-section">
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute rounded-full" style="width:600px;height:600px;border:1px solid #007C84;top:-100px;right:-100px;opacity:0.1;"></div>
+            <div class="absolute rounded-full" style="width:400px;height:400px;border:1px solid #007C84;top:50px;right:50px;opacity:0.1;"></div>
+            <div class="absolute rounded-full" style="width:800px;height:800px;border:1px solid #fff;bottom:-300px;right:-200px;opacity:0.05;"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 py-20 lg:py-20 w-full relative z-10" style="padding-top: clamp(80px, 12vw, 120px); padding-bottom: clamp(60px, 10vw, 80px);">
+          <div class="hidden lg:grid lg:grid-cols-2 gap-12 items-center">
+    
+    <div class="reveal-hero-left opacity-0 -translate-x-10 transition-all duration-1000 ease-out">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-6"
+            style="background:rgba(0,124,132,0.25);color:#7ECFD4;border:1px solid rgba(0,124,132,0.4);">
+            🌍 GCC Financial Infrastructure
+        </div>
+        <h1 class="text-6xl font-bold text-white leading-tight mb-6">
+            Digitizing <br /><span style="color:#7ECFD4;">Working Capital</span><br />for the GCC
+        </h1>
+        <p class="text-lg mb-8 max-w-lg" style="color:rgba(255,255,255,0.8);">
+            Saryaan connects corporates, suppliers, and financial institutions into one seamless ecosystem,
+            transforming invoices into verified, finance-ready digital assets.
+        </p>
+        <div class="flex flex-wrap gap-4">
+            <a href="contact.html"
+                class="px-8 py-3 rounded-full font-semibold text-white text-sm bg-[#0B1E3B] transform-gpu will-change-transform transition-all duration-300 ease-out hover:bg-[#007C84] hover:-translate-y-1 hover:scale-[1.03] hover:shadow-[0_14px_30px_rgba(0,124,132,0.35)] active:translate-y-0 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70">
+                Request a Demo
+            </a>
+            <a href="solutions.html"
+                class="px-8 py-3 rounded-full font-semibold text-sm text-white transform-gpu will-change-transform transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.03] hover:bg-white hover:text-[#0B1E3B] hover:border-white hover:shadow-[0_14px_30px_rgba(255,255,255,0.28)] active:translate-y-0 active:scale-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+                style="border:2px solid rgba(255,255,255,0.6);">
+                Explore Solutions
+            </a>
+        </div>
+    </div>
+
+    <div class="relative flex justify-center items-center" style="min-height:420px;">
+        <div class="absolute rounded-full" style="width:320px;height:320px;background:rgba(0,124,132,0.15);border:1px solid rgba(0,124,132,0.3);"></div>
+        <div class="absolute rounded-full" style="width:220px;height:220px;background:rgba(0,124,132,0.2);border:1px solid rgba(0,124,132,0.4);"></div>
+        
+        <div class="reveal-hero-card opacity-0 scale-50 transition-all duration-700 delay-300 absolute flex items-center justify-center rounded-full" style="width:80px;height:80px;background:#007C84; z-index: 10;">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+            </svg>
+        </div>
+
+        <div class="reveal-hero-card opacity-0 translate-y-10 transition-all duration-700 delay-500 absolute bg-white rounded-2xl shadow-2xl p-4 animate-bounce-slow" style="top:10px;right:20px;min-width:180px;">
+            <p class="text-xs font-semibold mb-2" style="color:#1E293B;">Invoice Pipeline</p>
+            <div class="flex gap-4">
+                <div class="text-center">
+                    <p class="text-2xl font-bold" style="color:#0B1E3B;">48</p>
+                    <p class="text-xs" style="color:#64748b;">Pending</p>
+                </div>
+                <div style="width:1px;background:#e2e8f0;"></div>
+                <div class="text-center">
+                    <p class="text-2xl font-bold" style="color:#007C84;">12</p>
+                    <p class="text-xs" style="color:#64748b;">Ready</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal-hero-card opacity-0 translate-y-10 transition-all duration-700 delay-700 absolute bg-white rounded-2xl shadow-2xl p-4 animate-bounce-medium" style="bottom:80px;right:0;min-width:180px;">
+            <p class="text-xs font-semibold mb-2" style="color:#1E293B;">Payment Orchestration</p>
+            <div class="flex gap-4">
+                <div class="text-center">
+                    <p class="text-2xl font-bold" style="color:#0B1E3B;">23</p>
+                    <p class="text-xs" style="color:#64748b;">Awaiting</p>
+                </div>
+                <div style="width:1px;background:#e2e8f0;"></div>
+                <div class="text-center">
+                    <p class="text-2xl font-bold" style="color:#00A65A;">9</p>
+                    <p class="text-xs" style="color:#64748b;">Settled</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reveal-hero-card opacity-0 translate-y-10 transition-all duration-700 delay-900 absolute bg-white rounded-2xl shadow-2xl p-3 flex items-center gap-3 animate-bounce-slow" style="bottom:20px;left:10px;min-width:160px;">
+            <div class="flex items-center justify-center rounded-full" style="width:32px;height:32px;background:#00A65A;flex-shrink:0;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+            </div>
+            <div>
+                <p class="text-xs" style="color:#64748b;">Supplier Risk</p>
+                <p class="text-sm font-bold" style="color:#00A65A;">Low Risk ✓</p>
+            </div>
+        </div>
+
+        <div class="reveal-hero-card opacity-0 translate-y-10 transition-all duration-700 delay-[1100ms] absolute bg-white rounded-2xl shadow-2xl p-3 animate-bounce-medium" style="top:30px;left:0;min-width:150px;">
+            <p class="text-xs font-semibold mb-1" style="color:#1E293B;">SCF Liquidity</p>
+            <p class="text-2xl font-bold" style="color:#007C84;">$2.4M</p>
+            <p class="text-xs" style="color:#64748b;">Available Capital</p>
+        </div>
+    </div>
+</div>
+
+
+
+  <div class="lg:hidden flex flex-col items-center text-center -mt-2">
+  
+  <div class="reveal-mobile-text opacity-0 transition-all duration-1000 ease-out">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-[10px] font-bold mb-6 
+                bg-[#007C84]/20 text-[#7ECFD4] border border-[#007C84]/40 uppercase tracking-wider">
+      🌍 GCC Financial Infrastructure
+    </div>
+
+    <h1 class="text-4xl font-extrabold text-white leading-[1.1] mb-4">
+      Digitizing <br />
+      <span class="text-[#7ECFD4]">Working Capital</span><br />
+      for the GCC
+    </h1>
+
+    <p class="text-base text-white/70 mb-8 max-w-[280px] leading-relaxed">
+      Connecting corporates, suppliers, and financial institutions into one seamless ecosystem.
+    </p>
+
+    <div class="flex flex-col gap-3 w-full max-w-[300px] mb-10">
+      <button class="w-full h-13 py-3.5 rounded-full font-bold text-white text-sm bg-[#007C84] 
+                     shadow-lg shadow-[#007C84]/20 active:scale-95 transition-all duration-300">
+        Request a Demo
+      </button>
+
+      <button onclick="window.location.href='solutions.html'"
+        class="w-full h-13 py-3.5 rounded-full border-2 border-white/20 font-bold text-sm text-white
+               active:bg-white active:text-[#0B1E3B] active:scale-95 transition-all duration-300">
+        Explore Solutions
+      </button>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 gap-3 w-full">
+    
+    <div class="reveal-mobile-card opacity-0 translate-y-8 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-4 flex flex-col justify-center min-h-[100px] transition-all duration-700">
+      <p class="text-[10px] font-bold mb-2 text-slate-400 uppercase">Invoice Pipeline</p>
+      <div class="flex gap-2 items-center justify-center">
+        <div class="text-center">
+          <p class="text-xl font-bold text-[#0B1E3B]">48</p>
+          <p class="text-[9px] text-slate-500 uppercase">Pending</p>
+        </div>
+        <div class="w-px h-6 bg-slate-200"></div>
+        <div class="text-center">
+          <p class="text-xl font-bold text-[#007C84]">12</p>
+          <p class="text-[9px] text-slate-500 uppercase">Ready</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal-mobile-card opacity-0 translate-y-8 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-4 flex flex-col justify-center min-h-[100px] transition-all duration-700">
+      <p class="text-[10px] font-bold mb-1 text-slate-400 uppercase">SCF Liquidity</p>
+      <p class="text-2xl font-black text-[#007C84]">$2.4M</p>
+      <p class="text-[9px] text-slate-500 uppercase">Available</p>
+    </div>
+
+    <div class="reveal-mobile-card opacity-0 translate-y-8 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-4 flex flex-col justify-center min-h-[100px] transition-all duration-700">
+      <p class="text-[10px] font-bold mb-2 text-slate-400 uppercase">Payments</p>
+      <div class="flex gap-3 items-center justify-center">
+        <div class="text-center">
+          <p class="text-xl font-bold text-[#0B1E3B]">23</p>
+        </div>
+        <div class="w-px h-6 bg-slate-200"></div>
+        <div class="text-center">
+          <p class="text-xl font-bold text-green-600">9</p>
+        </div>
+      </div>
+      <p class="text-[9px] text-slate-500 uppercase mt-1">Pending vs Settled</p>
+    </div>
+
+    <div class="reveal-mobile-card opacity-0 translate-y-8 bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl p-4 flex flex-col items-center justify-center min-h-[100px] transition-all duration-700">
+      <div class="flex items-center justify-center w-7 h-7 rounded-full bg-green-500/10 mb-1">
+        <svg class="w-4 h-4 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <p class="text-[10px] text-slate-500 uppercase">Supplier Risk</p>
+      <p class="text-xs font-bold text-green-600">Low Risk ✓</p>
+    </div>
+
+  </div>
+</div>
+
+
+    </section>
+
+
+
+<section class="w-full py-20" style="background:#F4F7FA;">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="reveal-item">
+            <p class="text-sm font-semibold mb-2" style="color:#007C84;">Our Solutions</p>
+            <h2 class="text-4xl font-bold mb-16" style="color:#0B1E3B;">Powering the Flow of Business Capital Across the GCC</h2>
+        </div>
+        
+        <div class="flex flex-col lg:flex-row gap-12 items-start">
+            <div class="w-full lg:w-5/12 flex justify-center items-center reveal-left svg-entrance" style="min-height:340px;">
+                <div class="relative flex justify-center items-center" style="width:300px;height:300px;">
+                    <svg viewBox="0 0 300 300" width="300" height="300" style="position:absolute;">
+                        <path id="seg0" d="M150,150 L150,20 A130,130 0 0,1 262,215 Z" fill="#007C84" onclick="switchSolution(0)" style="cursor:pointer;transition:fill 0.3s;" />
+                        <path id="seg1" d="M150,150 L262,215 A130,130 0 0,1 38,215 Z" fill="#0B1E3B" onclick="switchSolution(1)" style="cursor:pointer;transition:fill 0.3s;" />
+                        <path id="seg2" d="M150,150 L38,215 A130,130 0 0,1 150,20 Z" fill="#E2E8F0" onclick="switchSolution(2)" style="cursor:pointer;transition:fill 0.3s;" />
+                        <circle cx="150" cy="150" r="75" fill="white" />
+                    </svg>
+                    <div class="relative z-10 text-center">
+                        <div id="center-icon" class="flex items-center justify-center rounded-full mx-auto mb-2" style="width:48px;height:48px;background:#007C84;">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 11h.01M12 11h.01M15 11h.01M9 15h.01M12 15h.01M15 15h.01M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" />
+                            </svg>
+                        </div>
+                        <p class="text-xs font-bold" style="color:#0B1E3B;">Your<br />Business</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-7/12 reveal-item" style="transition-delay: 0.2s;">
+                <div class="flex items-center gap-3 mb-6">
+                    <div id="sol-badge" class="flex items-center justify-center rounded-full" style="width:40px;height:40px;background:rgba(0,124,132,0.15);border:2px solid #007C84;">
+                        <div id="sol-dot" class="rounded-full" style="width:14px;height:14px;background:#007C84;"></div>
+                    </div>
+                    <div>
+                        <h3 id="sol-title" class="text-xl font-bold" style="color:#0B1E3B;">Invoice Infrastructure Engine</h3>
+                        <p id="sol-sub" class="text-sm" style="color:#64748b;">Convert static invoices into compliant finance-ready digital assets</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="w-full md:w-1/2" id="items-list"></div>
+                    <div class="w-full md:w-1/2 bg-white rounded-2xl p-6 shadow-sm" id="desc-panel" style="border:1px solid rgba(0,124,132,0.2);">
+                        <p id="desc-title" class="text-sm font-semibold mb-3" style="color:#007C84;"></p>
+                        <p id="desc-text" class="text-sm leading-relaxed" style="color:#475569;"></p>
+                    </div>
+                </div>
+
+                <div class="flex gap-3 mt-8 flex-wrap">
+                    <button onclick="switchSolution(0)" id="tab0" class="px-5 py-2.5 rounded-full text-xs font-bold text-white transition-all" style="background:#007C84; border:none;">Invoice Engine</button>
+                    <button onclick="switchSolution(1)" id="tab1" class="px-5 py-2.5 rounded-full text-xs font-bold transition-all" style="background:white; color:#0B1E3B; border:2px solid #0B1E3B;">Payment Engine</button>
+                    <button onclick="switchSolution(2)" id="tab2" class="px-5 py-2.5 rounded-full text-xs font-bold transition-all" style="background:white; color:#0B1E3B; border:2px solid #0B1E3B;">SCF Engine</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- ═══════════════════════════════════════ -->
+    <!--         SME FINANCING SECTION          -->
+    <!-- ═══════════════════════════════════════ -->
+  <section class="w-full bg-[#F8FAFC] py-16 md:py-24 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <div class="reveal-card opacity-0 translate-y-12 transition-all duration-1000 ease-out">
+      
+      <div class="flex flex-col mb-12">
+        <h2 class="text-3xl md:text-5xl font-extrabold mb-4 tracking-tight" style="color:#0B1E3B;">
+          SME Financing
+        </h2>
+        <p class="text-lg md:text-2xl font-semibold mb-6" style="color:#007C84;">
+          Fast structured capital for growing businesses
+        </p>
+        
+        <div class="h-1 w-20 mb-8 rounded-full" style="background:#007C84;"></div>
+
+        <p class="text-base md:text-lg leading-relaxed max-w-4xl" style="color:#475569;">
+          Maintain steady cash flow with reliable and flexible financing solutions designed for SMEs and established enterprises. 
+          Access capital efficiently and keep your operations moving without disruption through Saryaan's integrated liquidity network.
+        </p>
+      </div>
+
+      <div class="relative group">
+        <div class="absolute -inset-1 bg-gradient-to-r from-[#007C84] to-[#0B1E3B] rounded-2xl blur opacity-10 group-hover:opacity-20 transition duration-1000"></div>
+        
+        <img 
+          src="./img.jpeg" 
+          alt="Saryaan SME financing platform preview" 
+          class="relative w-full rounded-2xl shadow-2xl border border-slate-200 transition-transform duration-700 group-hover:scale-[1.01]" 
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="w-full py-16 md:py-24 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+        
+        <div class="text-center mb-12 md:mb-20">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight" style="color:#0B1E3B;">
+                From Invoice to Capital<br class="hidden md:block" /> In One Connected Workflow
+            </h2>
+            <p class="text-base md:text-lg max-w-3xl mx-auto leading-relaxed" style="color:#64748b;">
+                Saryaan replaces fragmented manual processes with structured digital workflows that reduce fraud risk, accelerate payments, and unlock supplier liquidity.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+            <div class="reveal-card opacity-0 translate-y-12 transition-all duration-700 ease-out group bg-gray-50 rounded-3xl p-8 border border-slate-100 hover:border-[#007C84]/30 hover:bg-white hover:shadow-2xl hover:-translate-y-2">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3" style="background:rgba(0,124,132,0.1);">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:#007C84;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2 1 3 3 3h10c2 0 3-1 3-3V7c0-2-1-3-3-3H7C5 4 4 5 4 7zm0 5h16M9 4v16" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 tracking-tight" style="color:#0B1E3B;">Multi ERP Integration</h3>
+                <p class="text-sm md:text-base leading-relaxed" style="color:#64748b;">Connect seamlessly with any ERP system including SAP, Oracle, Microsoft Dynamics for unified invoice and payment data flow.</p>
+            </div>
+
+            <div class="reveal-card opacity-0 translate-y-12 transition-all duration-700 ease-out group bg-gray-50 rounded-3xl p-8 border border-slate-100 hover:border-[#007C84]/30 hover:bg-white hover:shadow-2xl hover:-translate-y-2">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3" style="background:rgba(0,124,132,0.1);">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:#007C84;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 tracking-tight" style="color:#0B1E3B;">E-invoicing Ready</h3>
+                <p class="text-sm md:text-base leading-relaxed" style="color:#64748b;">Fully compliant with regional e-invoicing mandates, ensuring zero regulatory risk across all markets.</p>
+            </div>
+
+            <div class="reveal-card opacity-0 translate-y-12 transition-all duration-700 ease-out group bg-gray-50 rounded-3xl p-8 border border-slate-100 hover:border-[#007C84]/30 hover:bg-white hover:shadow-2xl hover:-translate-y-2">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3" style="background:rgba(0,124,132,0.1);">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:#007C84;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 tracking-tight" style="color:#0B1E3B;">Islamic Finance Compatible</h3>
+                <p class="text-sm md:text-base leading-relaxed" style="color:#64748b;">Built in support for Murabaha, Wakala and Ijara structures, enabling Sharia compliant supply chain financing across the GCC.</p>
+            </div>
+
+            <div class="reveal-card opacity-0 translate-y-12 transition-all duration-700 ease-out group bg-gray-50 rounded-3xl p-8 border border-slate-100 hover:border-[#0B1E3B]/10 hover:bg-white hover:shadow-2xl hover:-translate-y-2">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3" style="background:rgba(11,30,59,0.08);">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:#0B1E3B;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 tracking-tight" style="color:#0B1E3B;">Enterprise Grade Security</h3>
+                <p class="text-sm md:text-base leading-relaxed" style="color:#64748b;">Bank level encryption, role based access control, and full audit trails, keeping your financial data secure and compliant.</p>
+            </div>
+
+            <div class="reveal-card opacity-0 translate-y-12 transition-all duration-700 ease-out group bg-gray-50 rounded-3xl p-8 border border-slate-100 hover:border-[#007C84]/30 hover:bg-white hover:shadow-2xl hover:-translate-y-2">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3" style="background:rgba(0,124,132,0.1);">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:#007C84;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 tracking-tight" style="color:#0B1E3B;">Risk and Analytics Layer</h3>
+                <p class="text-sm md:text-base leading-relaxed" style="color:#64748b;">Real time risk scoring, supplier analytics and capital flow dashboards, giving you full visibility across your B2B ecosystem.</p>
+            </div>
+
+            <div class="reveal-card opacity-0 translate-y-12 transition-all duration-700 ease-out group bg-gray-50 rounded-3xl p-8 border border-slate-100 hover:border-[#007C84]/30 hover:bg-white hover:shadow-2xl hover:-translate-y-2">
+                <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3" style="background:rgba(0,124,132,0.1);">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color:#007C84;">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3 tracking-tight" style="color:#0B1E3B;">Supply Chain Finance Engine</h3>
+                <p class="text-sm md:text-base leading-relaxed" style="color:#64748b;">Unlock early payment liquidity for suppliers through bank partner capital models, embedded directly into your invoice workflow.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    
+
+
+    <!-- ═══════════════════════════════════════ -->
+    <!--       EARLY ACCESS WAITLIST FORM        -->
+    <!-- ═══════════════════════════════════════ -->
+   <section class="w-full py-14 md:py-20" style="background:#0B1E3B; overflow: hidden;">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-10 lg:gap-14 items-start lg:items-center">
+
+            <div class="w-full lg:w-5/12 reveal-left-careful">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-6"
+                    style="background:rgba(0,124,132,0.25);color:#7ECFD4;border:1px solid rgba(0,124,132,0.5);">
+                    🚀 Limited Early Access
+                </div>
+
+                <h2 class="text-3xl md:text-4xl font-bold text-white leading-tight mb-5 md:mb-6">
+                    Join the Saryaan<br />
+                    <span style="color:#007C84;">Early Access</span><br />Program
+                </h2>
+
+                <p class="text-sm md:text-base mb-7 md:mb-8 leading-relaxed" style="color:rgba(255,255,255,0.75);">
+                    Be among the first GCC enterprises to digitize your invoice-to-payment workflow. Early access
+                    partners receive priority onboarding, dedicated support, and preferred pricing.
+                </p>
+
+                <div class="flex flex-col gap-3 md:gap-4">
+                    <div class="flex items-center gap-3">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style="background:rgba(0,124,132,0.3);">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <p class="text-xs md:text-sm" style="color:rgba(255,255,255,0.8);">Priority onboarding and dedicated account manager</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style="background:rgba(0,124,132,0.3);">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <p class="text-xs md:text-sm" style="color:rgba(255,255,255,0.8);">Preferred early-access pricing locked in</p>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center" style="background:rgba(0,124,132,0.3);">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                        </div>
+                        <p class="text-xs md:text-sm" style="color:rgba(255,255,255,0.8);">Direct input into product roadmap and features</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-7/12 flex justify-center lg:justify-end py-6 lg:py-0 reveal-form-careful">
+                <div class="w-full max-w-2xl bg-white rounded-3xl p-5 sm:p-7 shadow-2xl">
+
+                    <h3 class="text-lg sm:text-xl font-bold mb-2" style="color:#0B1E3B;">Request Early Access</h3>
+                    <p class="text-xs sm:text-sm mb-6 sm:mb-8 text-gray-500">
+                        Fill in your details and our team will be in touch within 24 hours.
+                    </p>
+
+                    <div id="success-msg" class="hidden rounded-2xl p-4 sm:p-6 mb-5 sm:mb-6 text-center bg-green-100 border border-green-500">
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center mx-auto mb-3 bg-green-500 text-white font-bold">✓</div>
+                        <h4 class="text-base sm:text-lg font-bold mb-1 text-green-500">Application Received!</h4>
+                        <p class="text-xs sm:text-sm text-gray-700">Thank you for applying. Our team will contact you within 24 hours.</p>
+                    </div>
+
+                    <div id="error-msg" class="hidden rounded-xl p-3 mb-5 text-xs sm:text-sm bg-red-50 border border-red-300 text-red-700"></div>
+
+                    <form id="waitlist-form" novalidate>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mb-4 sm:mb-5">
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-semibold mb-1 sm:mb-2 block" style="color:#0B1E3B;">Full Name *</label>
+                                <input type="text" id="field-name" name="fullName" required autocomplete="name" placeholder="Your full name"
+                                    class="w-full h-11 sm:h-12 px-3 sm:px-4 rounded-xl text-sm outline-none border border-gray-200 bg-gray-50 transition focus:bg-white focus:border-[#007C84] focus:ring-2 focus:ring-[#007C84]/20">
+                            </div>
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-semibold mb-1 sm:mb-2 block" style="color:#0B1E3B;">Company Name *</label>
+                                <input type="text" id="field-company" name="companyName" required autocomplete="organization" placeholder="Your company"
+                                    class="w-full h-11 sm:h-12 px-3 sm:px-4 rounded-xl text-sm outline-none border border-gray-200 bg-gray-50 transition focus:bg-white focus:border-[#007C84] focus:ring-2 focus:ring-[#007C84]/20">
+                            </div>
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-semibold mb-1 sm:mb-2 block" style="color:#0B1E3B;">Work Email *</label>
+                                <input type="email" id="field-email" name="workEmail" required autocomplete="email" placeholder="you@company.com"
+                                    class="w-full h-11 sm:h-12 px-3 sm:px-4 rounded-xl text-sm outline-none border border-gray-200 bg-gray-50 transition focus:bg-white focus:border-[#007C84] focus:ring-2 focus:ring-[#007C84]/20">
+                            </div>
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-semibold mb-1 sm:mb-2 block" style="color:#0B1E3B;">Phone Number</label>
+                                <input type="tel" id="field-phone" name="phoneNumber" autocomplete="tel" placeholder="+974 XXXX XXXX"
+                                    class="w-full h-11 sm:h-12 px-3 sm:px-4 rounded-xl text-sm outline-none border border-gray-200 bg-gray-50 transition focus:bg-white focus:border-[#007C84] focus:ring-2 focus:ring-[#007C84]/20">
+                            </div>
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-semibold mb-1 sm:mb-2 block" style="color:#0B1E3B;">Industry *</label>
+                                <select id="field-industry" name="industry" required class="w-full h-11 sm:h-12 px-3 sm:px-4 rounded-xl text-sm outline-none border border-gray-200 bg-gray-50 transition focus:bg-white focus:border-[#007C84] focus:ring-2 focus:ring-[#007C84]/20">
+                                    <option value="">Select Industry</option>
+                                    <option>Manufacturing</option>
+                                    <option>FMCG and Distribution</option>
+                                    <option>Healthcare</option>
+                                    <option>Retail and Wholesale</option>
+                                    <option>Construction and Infrastructure</option>
+                                    <option>Logistics and Supply Chain</option>
+                                    <option>Energy and Utilities</option>
+                                    <option>Banking and Financial Services</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="space-y-1.5">
+                                <label class="text-xs font-semibold mb-1 sm:mb-2 block" style="color:#0B1E3B;">Country *</label>
+                                <select id="field-country" name="country" required class="w-full h-11 sm:h-12 px-3 sm:px-4 rounded-xl text-sm outline-none border border-gray-200 bg-gray-50 transition focus:bg-white focus:border-[#007C84] focus:ring-2 focus:ring-[#007C84]/20">
+                                    <option value="">Select Country</option>
+                                    <option>Qatar</option>
+                                    <option>Saudi Arabia</option>
+                                    <option>UAE</option>
+                                    <option>Kuwait</option>
+                                    <option>Bahrain</option>
+                                    <option>Oman</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-5 sm:mb-6">
+                            <label class="text-xs font-semibold mb-2 sm:mb-3 block" style="color:#0B1E3B;">Solution Interest</label>
+                            <div class="flex flex-wrap gap-2 sm:gap-3">
+                                <button type="button" data-active="false" class="solution-btn px-3 py-1.5 sm:px-4 sm:py-2 text-[11px] sm:text-xs font-semibold rounded-full border border-gray-200 bg-gray-50 text-gray-600 transition hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#007C84]/30">Invoice Infrastructure</button>
+                                <button type="button" data-active="false" class="solution-btn px-3 py-1.5 sm:px-4 sm:py-2 text-[11px] sm:text-xs font-semibold rounded-full border border-gray-200 bg-gray-50 text-gray-600 transition hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#007C84]/30">Payment Orchestration</button>
+                                <button type="button" data-active="false" class="solution-btn px-3 py-1.5 sm:px-4 sm:py-2 text-[11px] sm:text-xs font-semibold rounded-full border border-gray-200 bg-gray-50 text-gray-600 transition hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#007C84]/30">Supply Chain Finance</button>
+                                <button type="button" data-active="false" class="solution-btn px-3 py-1.5 sm:px-4 sm:py-2 text-[11px] sm:text-xs font-semibold rounded-full border border-gray-200 bg-gray-50 text-gray-600 transition hover:bg-gray-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#007C84]/30">Risk and Analytics</button>
+                            </div>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full py-3 sm:py-4 rounded-xl font-bold text-white text-sm" style="background:linear-gradient(to right,#0B1E3B,#007C84);">
+                            Apply for Early Access →
+                        </button>
+                        <p class="text-[11px] sm:text-xs text-gray-500 mt-3">
+                            Demo mode: this form stores submissions in your browser local storage only.
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- ═══════════════════════════════════════ -->
+    <!--              CTA SECTION                -->
+    <!-- ═══════════════════════════════════════ -->
+  <section class="w-full py-20" style="background:linear-gradient(to bottom,#0a3050 0%,#0D9A9E 100%); overflow: hidden;">
+    <div class="max-w-3xl mx-auto px-6 text-center reveal-cta">
+        <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your Capital Flow?</h2>
+        <p class="text-base mb-8" style="color:rgba(255,255,255,0.8);">
+            Join leading GCC businesses already transforming their invoice and payment workflows with Saryaan.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="contact.html" class="cta-btn-hover px-8 py-3 rounded-full font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
+               style="background:#D4AF37;color:#0B1E3B;">
+                Request a Demo
+            </a>
+            <a href="contact.html" class="px-8 py-3 rounded-full font-semibold text-sm text-white border transition-all duration-300 hover:bg-white hover:text-[#0B1E3B]"
+               style="border-color:rgba(255,255,255,0.55);">
+                Contact Us
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+
+ <footer class="w-full py-12" style="background:#0B1E3B; overflow: hidden;">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
+
+            <div class="reveal-footer-item">
+                <div class="mb-4">
+                    <a href="index.html" class="inline-flex items-center rounded-xl bg-white px-3 py-2" aria-label="Saryaan Home">
+                        <img src="./logo.png" alt="Saryaan Logo" class="h-8 sm:h-9 w-auto object-contain" />
+                    </a>
+                </div>
+                <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5);">
+                    Powering the Flow of Business Capital Across the GCC.
+                </p>
+            </div>
+
+            <div class="reveal-footer-item">
+                <p class="text-xs font-bold mb-4 tracking-widest" style="color:#007C84;">SOLUTIONS</p>
+                <div class="flex flex-col gap-2">
+                    <a href="solutions.html" class="footer-link text-sm" style="color:rgba(255,255,255,0.6);">Invoice Infrastructure</a>
+                    <a href="solutions.html" class="footer-link text-sm" style="color:rgba(255,255,255,0.6);">Payment Orchestration</a>
+                    <a href="solutions.html" class="footer-link text-sm" style="color:rgba(255,255,255,0.6);">Supply Chain Finance</a>
+                    <a href="solutions.html" class="footer-link text-sm" style="color:rgba(255,255,255,0.6);">Risk and Analytics</a>
+                </div>
+            </div>
+
+            <div class="reveal-footer-item">
+                <p class="text-xs font-bold mb-4 tracking-widest" style="color:#007C84;">COMPANY</p>
+                <div class="flex flex-col gap-2">
+                    <a href="partners.html" class="footer-link text-sm" style="color:rgba(255,255,255,0.6);">Partners</a>
+                    <a href="contact.html" class="footer-link text-sm" style="color:rgba(255,255,255,0.6);">Contact</a>
+                </div>
+            </div>
+
+            <div class="reveal-footer-item">
+                <p class="text-xs font-bold mb-4 tracking-widest" style="color:#007C84;">GCC REGIONS</p>
+                <div class="flex flex-col gap-2" style="color:rgba(255,255,255,0.6);">
+                    <span class="text-sm">🇶🇦 Qatar</span>
+                    <span class="text-sm">🇦🇪 UAE</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="reveal-footer-item pt-8 flex flex-col md:flex-row items-center justify-between gap-3" style="border-top:1px solid rgba(255,255,255,0.1);">
+            <p class="text-xs" style="color:rgba(255,255,255,0.4);">© 2026 Saryaan. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#" class="footer-link text-xs" style="color:rgba(255,255,255,0.4);">Privacy Policy</a>
+                <a href="#" class="footer-link text-xs" style="color:rgba(255,255,255,0.4);">Terms of Use</a>
+                <a href="#" class="footer-link text-xs" style="color:rgba(255,255,255,0.4);">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+ <script src="./main.js"></script>
+</body>
+</html>
+
+
