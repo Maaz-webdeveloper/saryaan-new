@@ -240,7 +240,17 @@ function renderDesc() {
 //            INIT
 // ═══════════════════════════════
 document.addEventListener('DOMContentLoaded', function () {
-  renderSolution();
+  const hasSolutionsUI =
+    document.getElementById('seg0') &&
+    document.getElementById('seg1') &&
+    document.getElementById('seg2') &&
+    document.getElementById('items-list') &&
+    document.getElementById('desc-title') &&
+    document.getElementById('desc-text');
+
+  if (hasSolutionsUI) {
+    renderSolution();
+  }
 });
 
 // ═══════════════════════════════
@@ -354,6 +364,10 @@ document.addEventListener('DOMContentLoaded', function () {
       solutionBtns.forEach((btn) => setSolutionButtonState(btn, false));
       successMsg.classList.remove('hidden');
       successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => {
+        successMsg.classList.add('hidden');
+        form.classList.remove('hidden');
+      }, 3000);
     } catch (error) {
       if (errorMsg) {
         errorMsg.textContent = 'Unable to save right now. Please try again.';
@@ -363,6 +377,108 @@ document.addEventListener('DOMContentLoaded', function () {
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = previousLabel;
+    }
+  });
+});
+
+// Contact form persistence key (browser localStorage)
+const contactStorageKey = 'saryaan_contact_submissions';
+
+document.addEventListener('DOMContentLoaded', function () {
+  const contactForm = document.getElementById('contactForm');
+  const contactSuccess = document.getElementById('contact-success');
+  const contactError = document.getElementById('contact-error');
+  const contactSubmit = document.getElementById('contact-submit');
+
+  if (!contactForm || !contactSuccess) {
+    return;
+  }
+
+  window.getContactSubmissions = function () {
+    return JSON.parse(localStorage.getItem(contactStorageKey) || '[]');
+  };
+
+  contactForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const firstName = (document.getElementById('contact-first-name')?.value || '').trim();
+    const lastName = (document.getElementById('contact-last-name')?.value || '').trim();
+    const workEmail = (document.getElementById('contact-email')?.value || '').trim();
+    const jobTitle = (document.getElementById('contact-job-title')?.value || '').trim();
+    const companyName = (document.getElementById('contact-company')?.value || '').trim();
+    const phoneNumber = (document.getElementById('contact-phone')?.value || '').trim();
+    const region = (document.getElementById('contact-region')?.value || '').trim();
+    const projectStage = (document.getElementById('contact-project')?.value || '').trim();
+    const source = (document.getElementById('contact-source')?.value || '').trim();
+    const selectedSolutions = Array.from(document.querySelectorAll('.contact-solution:checked')).map((el) => el.value);
+
+    contactSuccess.classList.add('hidden');
+    if (contactError) {
+      contactError.classList.add('hidden');
+      contactError.textContent = '';
+    }
+
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(workEmail);
+    if (!firstName || !lastName || !workEmail || !jobTitle || !companyName || !phoneNumber || !region || !projectStage) {
+      if (contactError) {
+        contactError.textContent = 'Please fill all required contact fields marked with *.';
+        contactError.classList.remove('hidden');
+      }
+      return;
+    }
+
+    if (!isValidEmail) {
+      if (contactError) {
+        contactError.textContent = 'Please enter a valid work email address.';
+        contactError.classList.remove('hidden');
+      }
+      return;
+    }
+
+    const payload = {
+      firstName,
+      lastName,
+      fullName: `${firstName} ${lastName}`.trim(),
+      workEmail,
+      jobTitle,
+      companyName,
+      phoneNumber,
+      region,
+      projectStage,
+      source,
+      selectedSolutions,
+      submittedAt: new Date().toISOString(),
+    };
+
+    const previousLabel = contactSubmit ? contactSubmit.textContent : '';
+    if (contactSubmit) {
+      contactSubmit.disabled = true;
+      contactSubmit.textContent = 'Submitting...';
+    }
+
+    try {
+      const existing = JSON.parse(localStorage.getItem(contactStorageKey) || '[]');
+      const allSubmissions = Array.isArray(existing) ? existing : [];
+      allSubmissions.push(payload);
+      localStorage.setItem(contactStorageKey, JSON.stringify(allSubmissions));
+
+      contactForm.reset();
+      contactSuccess.classList.remove('hidden');
+      contactSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => {
+        contactSuccess.classList.add('hidden');
+      }, 3000);
+    } catch (error) {
+      if (contactError) {
+        contactError.textContent = 'Unable to save right now. Please try again.';
+        contactError.classList.remove('hidden');
+      }
+      console.error('Contact submit failed:', error);
+    } finally {
+      if (contactSubmit) {
+        contactSubmit.disabled = false;
+        contactSubmit.textContent = previousLabel;
+      }
     }
   });
 });

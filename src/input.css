@@ -126,3 +126,80 @@
         transform: translateX(8px);
         background: rgba(0, 124, 132, 0.05);
     }
+/* Left side se text aane ke liye */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+/* Niche se upar cards aane ke liye */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Blue shape ke liye scale animation */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Classes jo hum HTML par lagayenge */
+.animate-left { animation: slideInLeft 0.8s ease-out forwards; }
+.animate-up { opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }
+.animate-scale { opacity: 0; animation: scaleIn 0.8s ease-out forwards; }
+
+/* Delays taake ek ke baad ek cheez aaye */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+  /* Card/Form ke liye animation */
+  @keyframes revealCard {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Right side info cards ke liye slide animation */
+  @keyframes slideInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .reveal-card { opacity: 0; animation: revealCard 0.8s ease-out forwards; }
+  .reveal-info { opacity: 0; animation: slideInRight 0.8s ease-out forwards; }
+
+  /* Precise Delays */
+  .delay-1 { animation-delay: 0.2s; }
+  .delay-2 { animation-delay: 0.4s; }
+  .delay-3 { animation-delay: 0.6s; }
+  .delay-4 { animation-delay: 0.8s; }
+  .contact-check-card {
+    transition: all 0.3s ease;
+  }
+  .contact-check-card:hover {
+    border-color: #008C8C !important;
+    background: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 140, 140, 0.1);
+  }
+  /* Jab checkbox select ho jaye to border color change ho (Optional JS ke baghair) */
+  .contact-check-card:has(input:checked) {
+    border-color: #008C8C !important;
+    background: rgba(0, 140, 140, 0.05) !important;
+  }
+
+  @keyframes specialistPop {
+    0% { 
+      opacity: 0; 
+      transform: scale(0.92) translateY(30px); 
+    }
+    100% { 
+      opacity: 1; 
+      transform: scale(1) translateY(0); 
+    }
+  }
+
+  .animate-specialist {
+    opacity: 0;
+    animation: specialistPop 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.1) forwards;
+  }
