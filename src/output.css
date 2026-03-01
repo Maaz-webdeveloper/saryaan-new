@@ -674,6 +674,9 @@
   .bg-\[\#007C84\]\/20 {
     background-color: color-mix(in oklab, #007C84 20%, transparent);
   }
+  .bg-\[\#111\] {
+    background-color: #111;
+  }
   .bg-\[\#F8FAFC\] {
     background-color: #F8FAFC;
   }
@@ -682,6 +685,9 @@
   }
   .bg-\[\#FFF8EC\] {
     background-color: #FFF8EC;
+  }
+  .bg-\[\#fff\] {
+    background-color: #fff;
   }
   .bg-gray-50 {
     background-color: var(--color-gray-50);
