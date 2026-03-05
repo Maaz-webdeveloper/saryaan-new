@@ -127,10 +127,10 @@ const solutions = [
 ];
 
 // Active colors (Highlight color for the selected segment)
-const segColors = ["#008C8C", "#008C8C", "#008C8C"];
+const segColors = ["#20D5E1", "#20D5E1", "#20D5E1"];
 
 // Off colors (Muted colors for background segments)
-const segOff = ["#1e293b", "#0f172a", "#1e293b"];
+const segOff = ["#8CE1E9", "#8CE1E9", "#8CE1E9"];
 
 let currentSol = 0;
 let currentItem = 0;
