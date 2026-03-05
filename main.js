@@ -79,7 +79,7 @@ const solutions = [
     ],
   },
   {
-    color: "#0B1E3B",
+    color: "#007C84",
     title: "Payment Orchestration Engine",
     sub: "Digitize B2B payment workflows with real-time reconciliation",
     items: [
