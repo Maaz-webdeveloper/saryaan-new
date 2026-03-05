@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saryaan - Terms of Use</title>
+    <title>Saryaan - Cookie Policy</title>
     <meta name="description"
         content="SARYAAN digitizes invoice-to-payment workflows for GCC businesses with compliant e-invoicing, payment orchestration, and supply chain finance infrastructure.">
     <link rel="icon" type="image/png" href="./transparent.png">
@@ -16,8 +16,11 @@
     <!-- ═══════════════════════════════════════ -->
     <!--              NAVBAR                     -->
     <!-- ═══════════════════════════════════════ -->
+
+
     <nav class="w-full bg-[#FCFCFC] shadow-sm border-b sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
             <a href="index.html" class="inline-flex items-center shrink-0 relative z-10" aria-label="Saryaan Home">
                 <span
                     class="inline-flex h-14 sm:h-16 w-[170px] sm:w-[200px] overflow-hidden items-center justify-center">
@@ -25,8 +28,9 @@
                         class="block w-full h-full object-contain scale-[2.4] sm:scale-[2.6] origin-center" />
                 </span>
             </a>
+
             <div class="hidden lg:flex items-center gap-10 text-[15px]">
-                <a href="index.html" class="font-medium text-slate-600 hover:text-[#007C84] transition-colors">Home</a>
+                <a href="index.html" class="font-bold text-[#007C84]">Home</a>
                 <a href="solutions.html"
                     class="font-medium text-slate-600 hover:text-[#007C84] transition-colors">Solutions</a>
                 <a href="partners.html"
@@ -34,36 +38,51 @@
                 <a href="contact.html"
                     class="font-medium text-slate-600 hover:text-[#007C84] transition-colors">Contact</a>
             </div>
+
             <div class="hidden lg:flex items-center gap-4">
-                <a href="contact.html"
-                    class="px-7 py-2.5 rounded-full text-sm font-bold bg-[#0B1E3B] text-white hover:bg-[#007C84] hover:-translate-y-0.5 transition-all duration-300">
+                <a href="contact.html" class="px-7 py-2.5 rounded-full text-sm font-bold bg-[#0B1E3B] text-white 
+               shadow-[0_4px_14px_0_rgba(11,30,59,0.35)] hover:bg-[#007C84] 
+               hover:shadow-[0_6px_20px_rgba(0,124,132,0.32)] hover:-translate-y-0.5 
+               transition-all duration-300 active:scale-95">
                     Request Demo
                 </a>
             </div>
-            <button class="lg:hidden p-2 text-[#0B1E3B] focus:outline-none" onclick="toggleMenu()">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+            <button class="lg:hidden p-2 text-[#0B1E3B] focus:outline-none" onclick="toggleMenu()" id="menu-btn">
+                <svg id="menu-icon" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             </button>
         </div>
+
         <div id="mobile-menu"
-            class="hidden lg:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-2xl z-50">
+            class="hidden lg:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-2xl z-50 transition-all duration-300">
             <div class="px-6 py-8 flex flex-col gap-6">
-                <a href="index.html" class="text-lg font-semibold text-slate-700 hover:text-[#007C84]">Home</a>
-                <a href="solutions.html" class="text-lg font-semibold text-slate-700 hover:text-[#007C84]">Solutions</a>
-                <a href="partners.html" class="text-lg font-semibold text-slate-700 hover:text-[#007C84]">Partners</a>
-                <a href="contact.html" class="text-lg font-semibold text-slate-700 hover:text-[#007C84]">Contact</a>
-                <div class="pt-4 border-t border-slate-100">
-                    <a href="contact.html"
-                        class="block w-full h-12 rounded-full font-bold bg-[#0B1E3B] text-white text-center leading-[48px]">Request
-                        Demo</a>
+                <a href="index.html" class="text-lg font-bold text-[#007C84]">Home</a>
+                <a href="solutions.html"
+                    class="text-lg font-semibold text-slate-700 hover:text-[#007C84] transition-colors">Solutions</a>
+                <a href="partners.html"
+                    class="text-lg font-semibold text-slate-700 hover:text-[#007C84] transition-colors">Partners</a>
+                <a href="contact.html"
+                    class="text-lg font-semibold text-slate-700 hover:text-[#007C84] transition-colors">Contact</a>
+
+                <div class="flex flex-col gap-4 pt-4 border-t border-slate-50">
+
+                    <button
+                        class="w-full h-12 rounded-full font-bold bg-[#0B1E3B] text-white shadow-[0_4px_14px_0_rgba(11,30,59,0.35)] 
+                         hover:bg-[#007C84] hover:shadow-[0_6px_20px_rgba(0,124,132,0.32)] active:scale-95 active:-translate-y-0.5 transition-all duration-300">
+                        Request Demo
+                    </button>
+
                 </div>
             </div>
         </div>
     </nav>
+
     <script>
         function toggleMenu() {
-            document.getElementById("mobile-menu").classList.toggle("hidden");
+            const menu = document.getElementById("mobile-menu");
+            menu.classList.toggle("hidden");
         }
     </script>
 
@@ -74,9 +93,9 @@
         <div class="max-w-4xl mx-auto px-6">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-5"
                 style="background:rgba(0,124,132,0.25);color:#7ECFD4;border:1px solid rgba(0,124,132,0.4);">
-                📋 Legal
+                🍪 Legal
             </div>
-            <h1 class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">Terms of Use</h1>
+            <h1 class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-4">Cookie Policy</h1>
             <p class="text-sm" style="color:rgba(255,255,255,0.5);">Last Updated: 5th March 2026</p>
         </div>
     </section>
@@ -84,7 +103,7 @@
     <!-- Breadcrumb -->
     <div class="max-w-4xl mx-auto px-6 py-4">
         <p class="text-sm" style="color:#64748b;">
-            <a href="index.html" style="color:#007C84;">Home</a> › Terms of Use
+            <a href="index.html" style="color:#007C84;">Home</a> › Cookie Policy
         </p>
     </div>
 
@@ -97,13 +116,11 @@
             <!-- Intro -->
             <div class="rounded-2xl p-6 mb-10" style="background:#F4F7FA;border-left:4px solid #007C84;">
                 <p class="text-base leading-relaxed" style="color:#475569;">
-                    These Terms of Use govern the access to and use of the Saryaan website and related services. By
-                    accessing or using the website, you acknowledge that you have read, understood, and agree to be
-                    bound by these Terms.
+                    This Cookie Policy explains how Saryaan uses cookies and similar technologies when users visit our
+                    website.
                 </p>
             </div>
 
-            <!-- Sections -->
             <div class="flex flex-col gap-10">
 
                 <!-- 1 -->
@@ -113,64 +130,12 @@
                             style="background:rgba(0,124,132,0.12);">
                             <span class="text-xs font-bold" style="color:#007C84;">1</span>
                         </div>
-                        <h2 class="text-xl font-bold" style="color:#0B1E3B;">Website Access</h2>
+                        <h2 class="text-xl font-bold" style="color:#0B1E3B;">What Are Cookies</h2>
                     </div>
-                    <div class="pl-11">
-                        <p class="text-sm leading-relaxed mb-4" style="color:#475569;">Saryaan provides access to its
-                            website for informational and business purposes. Users may browse, view, and interact with
-                            website content subject to compliance with these Terms.</p>
-                        <p class="text-sm font-semibold mb-3" style="color:#0B1E3B;">Users agree not to:</p>
-                        <div class="flex flex-col gap-2">
-                            <div class="flex items-start gap-3">
-                                <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                                    style="background:rgba(239,68,68,0.1);">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        style="color:#ef4444;">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                            d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                </div>
-                                <p class="text-sm leading-relaxed" style="color:#475569;">Use the website for unlawful
-                                    or fraudulent purposes</p>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                                    style="background:rgba(239,68,68,0.1);">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        style="color:#ef4444;">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                            d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                </div>
-                                <p class="text-sm leading-relaxed" style="color:#475569;">Attempt unauthorized access to
-                                    restricted systems or data</p>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                                    style="background:rgba(239,68,68,0.1);">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        style="color:#ef4444;">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                            d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                </div>
-                                <p class="text-sm leading-relaxed" style="color:#475569;">Disrupt, damage, or interfere
-                                    with the operation of the website</p>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
-                                    style="background:rgba(239,68,68,0.1);">
-                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                        style="color:#ef4444;">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                            d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                </div>
-                                <p class="text-sm leading-relaxed" style="color:#475569;">Reverse engineer or attempt to
-                                    extract source code from the platform</p>
-                            </div>
-                        </div>
-                    </div>
+                    <p class="text-sm leading-relaxed pl-11" style="color:#475569;">
+                        Cookies are small text files placed on a user's device when visiting a website. They enable
+                        websites to recognize user devices, store preferences, and improve browsing functionality.
+                    </p>
                 </div>
 
                 <!-- 2 -->
@@ -180,36 +145,140 @@
                             style="background:rgba(0,124,132,0.12);">
                             <span class="text-xs font-bold" style="color:#007C84;">2</span>
                         </div>
-                        <h2 class="text-xl font-bold" style="color:#0B1E3B;">Intellectual Property Rights</h2>
+                        <h2 class="text-xl font-bold" style="color:#0B1E3B;">How Saryaan Uses Cookies</h2>
                     </div>
                     <div class="pl-11">
-                        <p class="text-sm leading-relaxed mb-3" style="color:#475569;">All materials on the Saryaan
-                            website, including but not limited to text, graphics, logos, branding elements, design
-                            assets, software, and technical descriptions, are owned by or licensed to Saryaan and
-                            protected by intellectual property laws.</p>
-                        <div class="rounded-xl p-4" style="background:#F8FAFC;border:1px solid #e2e8f0;">
-                            <p class="text-sm leading-relaxed" style="color:#475569;">Users may not copy, reproduce,
-                                distribute, modify, publish, or create derivative works without prior written permission
-                                from Saryaan.</p>
+                        <p class="text-sm mb-3" style="color:#475569;">Saryaan uses cookies to:</p>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                                    style="background:rgba(0,124,132,0.12);">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        style="color:#007C84;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <p class="text-sm leading-relaxed" style="color:#475569;">Ensure the website functions
+                                    properly</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                                    style="background:rgba(0,124,132,0.12);">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        style="color:#007C84;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <p class="text-sm leading-relaxed" style="color:#475569;">Improve site performance and
+                                    reliability</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                                    style="background:rgba(0,124,132,0.12);">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        style="color:#007C84;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <p class="text-sm leading-relaxed" style="color:#475569;">Analyze user interactions and
+                                    website traffic</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                                    style="background:rgba(0,124,132,0.12);">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        style="color:#007C84;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <p class="text-sm leading-relaxed" style="color:#475569;">Enhance user experience and
+                                    personalization</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5"
+                                    style="background:rgba(0,124,132,0.12);">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        style="color:#007C84;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <p class="text-sm leading-relaxed" style="color:#475569;">Support security and fraud
+                                    prevention mechanisms</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 3 -->
                 <div>
-                    <div class="flex items-center gap-3 mb-4">
+                    <div class="flex items-center gap-3 mb-6">
                         <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
                             style="background:rgba(0,124,132,0.12);">
                             <span class="text-xs font-bold" style="color:#007C84;">3</span>
                         </div>
-                        <h2 class="text-xl font-bold" style="color:#0B1E3B;">Accuracy of Information</h2>
+                        <h2 class="text-xl font-bold" style="color:#0B1E3B;">Types of Cookies We Use</h2>
                     </div>
-                    <div class="pl-11">
-                        <p class="text-sm leading-relaxed mb-3" style="color:#475569;">The information presented on the
-                            website is provided for general informational purposes only. While Saryaan strives to ensure
-                            accuracy, we make no guarantees regarding completeness, reliability, or timeliness.</p>
-                        <p class="text-sm leading-relaxed" style="color:#475569;">Content may be updated or modified at
-                            any time without prior notice.</p>
+                    <div class="pl-11 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="rounded-xl p-5" style="background:#F8FAFC;border:1px solid #e2e8f0;">
+                            <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-3"
+                                style="background:rgba(0,124,132,0.1);">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    style="color:#007C84;">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <p class="text-sm font-bold mb-2" style="color:#0B1E3B;">Essential Cookies</p>
+                            <p class="text-xs leading-relaxed" style="color:#475569;">Required for basic website
+                                functionality such as navigation and access to secure areas.</p>
+                        </div>
+                        <div class="rounded-xl p-5" style="background:#F8FAFC;border:1px solid #e2e8f0;">
+                            <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-3"
+                                style="background:rgba(0,124,132,0.1);">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    style="color:#007C84;">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                </svg>
+                            </div>
+                            <p class="text-sm font-bold mb-2" style="color:#0B1E3B;">Performance and Analytics Cookies
+                            </p>
+                            <p class="text-xs leading-relaxed" style="color:#475569;">Help us understand how visitors
+                                interact with the website by collecting anonymous usage data.</p>
+                        </div>
+                        <div class="rounded-xl p-5" style="background:#F8FAFC;border:1px solid #e2e8f0;">
+                            <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-3"
+                                style="background:rgba(0,124,132,0.1);">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    style="color:#007C84;">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <p class="text-sm font-bold mb-2" style="color:#0B1E3B;">Functional Cookies</p>
+                            <p class="text-xs leading-relaxed" style="color:#475569;">Remember user preferences such as
+                                language or display settings to improve the browsing experience.</p>
+                        </div>
+                        <div class="rounded-xl p-5" style="background:#F8FAFC;border:1px solid #e2e8f0;">
+                            <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-3"
+                                style="background:rgba(0,124,132,0.1);">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                    style="color:#007C84;">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                                </svg>
+                            </div>
+                            <p class="text-sm font-bold mb-2" style="color:#0B1E3B;">Security Cookies</p>
+                            <p class="text-xs leading-relaxed" style="color:#475569;">Help detect suspicious activity
+                                and protect against unauthorized access.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -220,14 +289,17 @@
                             style="background:rgba(0,124,132,0.12);">
                             <span class="text-xs font-bold" style="color:#007C84;">4</span>
                         </div>
-                        <h2 class="text-xl font-bold" style="color:#0B1E3B;">Third-Party Services</h2>
+                        <h2 class="text-xl font-bold" style="color:#0B1E3B;">Managing Cookies</h2>
                     </div>
                     <div class="pl-11">
-                        <p class="text-sm leading-relaxed mb-3" style="color:#475569;">The website may include links to
-                            third-party platforms or services. Saryaan does not control and is not responsible for the
-                            content, security practices, or policies of such third parties.</p>
-                        <p class="text-sm leading-relaxed" style="color:#475569;">Users access third-party services at
-                            their own discretion and risk.</p>
+                        <p class="text-sm leading-relaxed mb-3" style="color:#475569;">Users can manage or disable
+                            cookies through their browser settings. Most browsers allow users to block or delete
+                            cookies.</p>
+                        <div class="rounded-xl p-4"
+                            style="background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.25);">
+                            <p class="text-sm" style="color:#92400e;">⚠️ Please note that disabling certain cookies may
+                                affect the functionality of the website.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -238,16 +310,12 @@
                             style="background:rgba(0,124,132,0.12);">
                             <span class="text-xs font-bold" style="color:#007C84;">5</span>
                         </div>
-                        <h2 class="text-xl font-bold" style="color:#0B1E3B;">Limitation of Liability</h2>
+                        <h2 class="text-xl font-bold" style="color:#0B1E3B;">Third-Party Cookies</h2>
                     </div>
-                    <div class="pl-11">
-                        <div class="rounded-xl p-5" style="background:#F8FAFC;border:1px solid #e2e8f0;">
-                            <p class="text-sm leading-relaxed" style="color:#475569;">To the fullest extent permitted by
-                                applicable law, Saryaan shall not be liable for any indirect, incidental, consequential,
-                                or special damages arising from the use or inability to use the website or related
-                                services.</p>
-                        </div>
-                    </div>
+                    <p class="text-sm leading-relaxed pl-11" style="color:#475569;">
+                        Saryaan may use third-party analytics or performance services that place cookies on user devices
+                        to collect usage insights. These services operate under their own privacy policies.
+                    </p>
                 </div>
 
                 <!-- 6 -->
@@ -257,41 +325,11 @@
                             style="background:rgba(0,124,132,0.12);">
                             <span class="text-xs font-bold" style="color:#007C84;">6</span>
                         </div>
-                        <h2 class="text-xl font-bold" style="color:#0B1E3B;">Indemnification</h2>
+                        <h2 class="text-xl font-bold" style="color:#0B1E3B;">Updates to This Policy</h2>
                     </div>
                     <p class="text-sm leading-relaxed pl-11" style="color:#475569;">
-                        Users agree to indemnify and hold Saryaan harmless from claims, liabilities, damages, or
-                        expenses arising from misuse of the website or violation of these Terms.
-                    </p>
-                </div>
-
-                <!-- 7 -->
-                <div>
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                            style="background:rgba(0,124,132,0.12);">
-                            <span class="text-xs font-bold" style="color:#007C84;">7</span>
-                        </div>
-                        <h2 class="text-xl font-bold" style="color:#0B1E3B;">Governing Law</h2>
-                    </div>
-                    <p class="text-sm leading-relaxed pl-11" style="color:#475569;">
-                        These Terms shall be governed by and interpreted in accordance with the laws of the applicable
-                        jurisdiction in which Saryaan operates.
-                    </p>
-                </div>
-
-                <!-- 8 -->
-                <div>
-                    <div class="flex items-center gap-3 mb-4">
-                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
-                            style="background:rgba(0,124,132,0.12);">
-                            <span class="text-xs font-bold" style="color:#007C84;">8</span>
-                        </div>
-                        <h2 class="text-xl font-bold" style="color:#0B1E3B;">Modifications</h2>
-                    </div>
-                    <p class="text-sm leading-relaxed pl-11" style="color:#475569;">
-                        Saryaan may revise these Terms at any time. Continued use of the website after such revisions
-                        constitutes acceptance of the updated Terms.
+                        Saryaan may update this Cookie Policy from time to time to reflect legal, operational, or
+                        technological changes. The latest version will always be available on this page.
                     </p>
                 </div>
 
@@ -299,7 +337,7 @@
 
             <!-- Contact CTA -->
             <div class="mt-14 rounded-2xl p-8 text-center" style="background:linear-gradient(135deg,#0B1E3B,#007C84);">
-                <p class="text-white font-bold text-lg mb-2">Questions about these Terms?</p>
+                <p class="text-white font-bold text-lg mb-2">Questions about our Cookie Policy?</p>
                 <p class="text-sm mb-6" style="color:rgba(255,255,255,0.7);">Reach out through our official contact
                     channels and we will respond within 24 hours.</p>
                 <a href="contact.html"
@@ -381,9 +419,7 @@
             </div>
         </div>
     </footer>
-
     <script src="./main.js"></script>
-
 </body>
 
 </html>
