@@ -1,206 +1,290 @@
 @import "tailwindcss";
-*{
-    font-family: 'Poppins', sans-serif;
+* {
+  font-family: "Poppins", sans-serif;
 }
 
-    @keyframes floatBounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-15px); }
-    }
-    .animate-bounce-slow { animation: floatBounce 6s ease-in-out infinite; }
-    .animate-bounce-medium { animation: floatBounce 4.5s ease-in-out infinite; animation-delay: 1s; }
-    /* 1. Initial State (Chhupa hua) */
-    .reveal-item {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: all 0.8s ease-out;
-    }
+.logo-scale {
+  transform: scale(2.1);
+  transform-origin: center;
+}
 
-    .reveal-left {
-        opacity: 0;
-        transform: translateX(-40px);
-        transition: all 1s ease-out;
-    }
+@media (min-width: 640px) {
+  .logo-scale {
+    transform: scale(2.4);
+  }
+}
 
-    /* 2. Active State (Jab scroll par dikhega) */
-    .reveal-visible {
-        opacity: 1;
-        transform: translateY(0) translateX(0);
-    }
+@keyframes floatBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+.animate-bounce-slow {
+  animation: floatBounce 6s ease-in-out infinite;
+}
+.animate-bounce-medium {
+  animation: floatBounce 4.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+/* 1. Initial State (Chhupa hua) */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
 
-    /* SVG ki thodi si rotation entry */
-    .svg-entrance {
-        transform: scale(0.8) rotate(-10deg);
-        transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    }
-    .svg-entrance.reveal-visible {
-        transform: scale(1) rotate(0deg);
-    }
-    /* Baayein se aane wala content */
-    .reveal-left-careful {
-        opacity: 0;
-        transform: translateX(-30px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-    }
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: all 1s ease-out;
+}
 
-    /* Neeche se aane wala form */
-    .reveal-form-careful {
-        opacity: 0;
-        transform: translateY(50px);
-        transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
+/* 2. Active State (Jab scroll par dikhega) */
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
 
-    /* Jab screen par nazar aaye */
-    .is-visible {
-        opacity: 1 !important;
-        transform: translate(0, 0) !important;
-    }
-    /* CTA Animation Style */
-    .reveal-cta {
-        opacity: 0;
-        transform: scale(0.95) translateY(30px);
-        transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-    }
-    
-    .cta-visible {
-        opacity: 1 !important;
-        transform: scale(1) translateY(0) !important;
-    }
+/* SVG ki thodi si rotation entry */
+.svg-entrance {
+  transform: scale(0.8) rotate(-10deg);
+  transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.svg-entrance.reveal-visible {
+  transform: scale(1) rotate(0deg);
+}
+/* Baayein se aane wala content */
+.reveal-left-careful {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
 
-    /* Button Hover Effect */
-    .cta-btn-hover {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .cta-btn-hover:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
-    /* Footer elements initially hidden */
-    .reveal-footer-item {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.6s ease-out;
-    }
+/* Neeche se aane wala form */
+.reveal-form-careful {
+  opacity: 0;
+  transform: translateY(50px);
+  transition:
+    opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
 
-    /* Visible state */
-    .footer-visible {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-    }
+/* Jab screen par nazar aaye */
+.is-visible {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+/* CTA Animation Style */
+.reveal-cta {
+  opacity: 0;
+  transform: scale(0.95) translateY(30px);
+  transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
 
-    /* Link Hover Effect */
-    .footer-link:hover {
-        color: #007C84 !important;
-        padding-left: 5px;
-        transition: all 0.3s ease;
-    }
-    /* Solutions SVG Animation */
-    .svg-entrance {
-        opacity: 0;
-        transform: rotate(-10deg) scale(0.9);
-        transition: all 1s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-    
-    .svg-active {
-        opacity: 1;
-        transform: rotate(0deg) scale(1);
-    }
+.cta-visible {
+  opacity: 1 !important;
+  transform: scale(1) translateY(0) !important;
+}
 
-    /* SME Financing Card Animation */
-    .reveal-card {
-        opacity: 0;
-        transform: translateY(40px);
-        transition: all 0.8s ease-out;
-    }
+/* Button Hover Effect */
+.cta-btn-hover {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.cta-btn-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* Footer elements initially hidden */
+.reveal-footer-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
 
-    .card-active {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-    }
+/* Visible state */
+.footer-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
 
-    /* List Item Hover */
-    .solution-item {
-        transition: all 0.3s ease;
-    }
-    .solution-item:hover {
-        transform: translateX(8px);
-        background: rgba(0, 124, 132, 0.05);
-    }
+/* Link Hover Effect */
+.footer-link:hover {
+  color: #007c84 !important;
+  padding-left: 5px;
+  transition: all 0.3s ease;
+}
+/* Solutions SVG Animation */
+.svg-entrance {
+  opacity: 0;
+  transform: rotate(-10deg) scale(0.9);
+  transition: all 1s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.svg-active {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* SME Financing Card Animation */
+.reveal-card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.card-active {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* List Item Hover */
+.solution-item {
+  transition: all 0.3s ease;
+}
+.solution-item:hover {
+  transform: translateX(8px);
+  background: rgba(0, 124, 132, 0.05);
+}
 /* Left side se text aane ke liye */
 @keyframes slideInLeft {
-  from { opacity: 0; transform: translateX(-30px); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* Niche se upar cards aane ke liye */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Blue shape ke liye scale animation */
 @keyframes scaleIn {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Classes jo hum HTML par lagayenge */
-.animate-left { animation: slideInLeft 0.8s ease-out forwards; }
-.animate-up { opacity: 0; animation: fadeInUp 0.8s ease-out forwards; }
-.animate-scale { opacity: 0; animation: scaleIn 0.8s ease-out forwards; }
+.animate-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+.animate-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+.animate-scale {
+  opacity: 0;
+  animation: scaleIn 0.8s ease-out forwards;
+}
 
 /* Delays taake ek ke baad ek cheez aaye */
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
-  /* Card/Form ke liye animation */
-  @keyframes revealCard {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* Right side info cards ke liye slide animation */
-  @keyframes slideInRight {
-    from { opacity: 0; transform: translateX(30px); }
-    to { opacity: 1; transform: translateX(0); }
-  }
-
-  .reveal-card { opacity: 0; animation: revealCard 0.8s ease-out forwards; }
-  .reveal-info { opacity: 0; animation: slideInRight 0.8s ease-out forwards; }
-
-  /* Precise Delays */
-  .delay-1 { animation-delay: 0.2s; }
-  .delay-2 { animation-delay: 0.4s; }
-  .delay-3 { animation-delay: 0.6s; }
-  .delay-4 { animation-delay: 0.8s; }
-  .contact-check-card {
-    transition: all 0.3s ease;
-  }
-  .contact-check-card:hover {
-    border-color: #008C8C !important;
-    background: #ffffff !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 140, 140, 0.1);
-  }
-  /* Jab checkbox select ho jaye to border color change ho (Optional JS ke baghair) */
-  .contact-check-card:has(input:checked) {
-    border-color: #008C8C !important;
-    background: rgba(0, 140, 140, 0.05) !important;
-  }
-
-  @keyframes specialistPop {
-    0% { 
-      opacity: 0; 
-      transform: scale(0.92) translateY(30px); 
-    }
-    100% { 
-      opacity: 1; 
-      transform: scale(1) translateY(0); 
-    }
-  }
-
-  .animate-specialist {
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
+/* Card/Form ke liye animation */
+@keyframes revealCard {
+  from {
     opacity: 0;
-    animation: specialistPop 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.1) forwards;
+    transform: translateY(30px);
   }
- 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Right side info cards ke liye slide animation */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.reveal-card {
+  opacity: 0;
+  animation: revealCard 0.8s ease-out forwards;
+}
+.reveal-info {
+  opacity: 0;
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Precise Delays */
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
+.delay-4 {
+  animation-delay: 0.8s;
+}
+.contact-check-card {
+  transition: all 0.3s ease;
+}
+.contact-check-card:hover {
+  border-color: #008c8c !important;
+  background: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 140, 140, 0.1);
+}
+/* Jab checkbox select ho jaye to border color change ho (Optional JS ke baghair) */
+.contact-check-card:has(input:checked) {
+  border-color: #008c8c !important;
+  background: rgba(0, 140, 140, 0.05) !important;
+}
+
+@keyframes specialistPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-specialist {
+  opacity: 0;
+  animation: specialistPop 0.8s cubic-bezier(0.2, 0.8, 0.2, 1.1) forwards;
+}

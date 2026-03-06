@@ -452,8 +452,8 @@
   .w-48 {
     width: calc(var(--spacing) * 48);
   }
-  .w-\[140px\] {
-    width: 140px;
+  .w-\[200px\] {
+    width: 200px;
   }
   .w-auto {
     width: auto;
@@ -535,9 +535,6 @@
     --tw-scale-y: 100%;
     --tw-scale-z: 100%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
-  .scale-\[1\.9\] {
-    scale: 1.9;
   }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
@@ -1475,14 +1472,9 @@
       width: calc(var(--spacing) * 12);
     }
   }
-  .sm\:w-\[180px\] {
+  .sm\:w-\[260px\] {
     @media (width >= 40rem) {
-      width: 180px;
-    }
-  }
-  .sm\:scale-\[2\.1\] {
-    @media (width >= 40rem) {
-      scale: 2.1;
+      width: 260px;
     }
   }
   .sm\:grid-cols-2 {
@@ -1785,7 +1777,16 @@
   }
 }
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+.logo-scale {
+  transform: scale(2.1);
+  transform-origin: center;
+}
+@media (min-width: 640px) {
+  .logo-scale {
+    transform: scale(2.4);
+  }
 }
 @keyframes floatBounce {
   0%, 100% {
@@ -1851,7 +1852,7 @@
 }
 .cta-btn-hover:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 .reveal-footer-item {
   opacity: 0;
@@ -1863,7 +1864,7 @@
   transform: translateY(0) !important;
 }
 .footer-link:hover {
-  color: #007C84 !important;
+  color: #007c84 !important;
   padding-left: 5px;
   transition: all 0.3s ease;
 }
@@ -1986,13 +1987,13 @@
   transition: all 0.3s ease;
 }
 .contact-check-card:hover {
-  border-color: #008C8C !important;
+  border-color: #008c8c !important;
   background: #ffffff !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 140, 140, 0.1);
 }
 .contact-check-card:has(input:checked) {
-  border-color: #008C8C !important;
+  border-color: #008c8c !important;
   background: rgba(0, 140, 140, 0.05) !important;
 }
 @keyframes specialistPop {
