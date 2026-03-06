@@ -452,8 +452,8 @@
   .w-48 {
     width: calc(var(--spacing) * 48);
   }
-  .w-\[200px\] {
-    width: 200px;
+  .w-\[160px\] {
+    width: 160px;
   }
   .w-auto {
     width: auto;
@@ -1505,6 +1505,11 @@
   .sm\:px-4 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 4);
+    }
+  }
+  .sm\:px-6 {
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 6);
     }
   }
   .sm\:py-2 {
